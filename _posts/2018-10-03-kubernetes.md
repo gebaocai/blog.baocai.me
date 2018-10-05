@@ -3,8 +3,9 @@ layout: post
 title: Kubernetes项目
 author: "gebaocai"
 header-style: text
-lang: en
+lang: zh
 tags:
+  - Docker
   - Kubernetes
 ---
 # 项目介绍

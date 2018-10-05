@@ -12,11 +12,15 @@ tags:
 BlockingQueue是继承Queue的接口。  
 BlockingQueue在Queue的基础上增加了两个阻塞行为:当获取队列元素但队列为空时，会阻塞等侍队列中元素再返回;也支持增加元素时，如何队列已满，那么会等待队列有空间时再放入。
 # BlockingQueue主要方法行为
- Action  | 抛出异常 | 特殊值 | 阻塞 | 超时
-:---|---|---|---|--- 
-插入 | add(e)  |  offer(e)    |  put(e)   |offer(e, time, unit)
-移除 | remove()| poll()|take()|poll(time, unit)
-检查 | elemnet()|peek()|不适用|不适用
+
+|-----------------+---------+-------------+------------+------------|
+|                 |  抛出异常   | 特殊值  | 阻塞  | 超时  |
+|-----------------|:---------:|:-----------:|:----------:|:----------:|
+| 插入 |add(e) | offer(e)      | put(e)    | offer(e, time, unit)    |
+| 移除     |remove()         | poll()      | take()            | poll(time, unit)            |
+| 检查      |elemnet()        | peek()             | 不适用            | 不适用            |
+|=================+============+=================+================+================|
+
 put(e)/take() 两方法，就是上节所提到的两个阻塞行为
 
 BlockingQueue不接受`null`元素，`null`用来作为一个标记值指名`poll`操作失败。BlockingQueue可以是限制容量的，如果不指定容量，则会指定`Integer.MAX_VALUE`为默认值。主要应用于`producer-consumer`队列。
