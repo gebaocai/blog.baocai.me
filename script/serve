@@ -1,1 +1,1 @@
-docker run --rm --volume="D:/code/git/blog.baocai.me:/srv/jekyll" -p 35729:35729 -p 4000:4000 -p 3000:3000 -p 80:4000 -it jekyll/builder:3.8 jekyll serve
+docker run --rm --volume="D:/code/blog.baocai.me:/srv/jekyll" -p 35729:35729 -p 4000:4000 -p 3000:3000 -p 80:4000 -it jekyll/builder:3.8 jekyll serve
